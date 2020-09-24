@@ -1,4 +1,4 @@
-package ru.ssau.tk.oop.functions;
+package ru.ssau.tk.oop.propro.functions;
 
 public interface MathFunction {
 
