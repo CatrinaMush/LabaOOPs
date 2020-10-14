@@ -28,4 +28,22 @@ public class Person {
     public void setPassportId(int passportId) {
         this.passportId = passportId;
     }
+
+    public Person() {
+    }
+
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public Person(int passportId) {
+        this.passportId = passportId;
+    }
+
+    public Person(String firstName, String lastName, int passportId) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.passportId = passportId;
+    }
 }
