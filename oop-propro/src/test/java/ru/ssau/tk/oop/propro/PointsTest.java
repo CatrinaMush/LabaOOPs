@@ -62,6 +62,25 @@ public class PointsTest extends TestCase {
 
     public void testLenght() {
         Point firstPoint = new Point(3, 4, 0);
-        assertEquals(lenght(firstPoint),5,0.00001);
+        assertEquals(lenght(firstPoint), 5, 0.00001);
+    }
+
+    public void testOpposite() {
+        Point firstPoint = new Point(3, 4, 0);
+        Point resultPoint = opposite(firstPoint);
+        assertEquals(resultPoint.x, -3, 0.00001);
+        assertEquals(resultPoint.y, -4, 0.00001);
+        assertEquals(resultPoint.z, 0, 0.00001);
+    }
+
+    public void testInverse() {
+        Point firstPoint = new Point(10, 2, 5);
+        Point resultPoint = inverse(firstPoint);
+        assertEquals(resultPoint.x, 0.1);
+        assertEquals(resultPoint.y, 0.5);
+        assertEquals(resultPoint.z, 0.2);
+
+        Point secondPoint = new Point(10, 0, 5);
+        assertThrows(ArithmeticException.class, () -> inverse(secondPoint));
     }
 }

@@ -28,7 +28,18 @@ public class Points {
         return new Point(firstPoint.x * myConstant, firstPoint.y * myConstant, firstPoint.z * myConstant);
     }
 
-    public static double lenght(Point point){
+    public static double lenght(Point point) {
         return point.length();
+    }
+
+    public static Point opposite(Point firstPoint) {
+        return new Point(-firstPoint.x, -firstPoint.y, -firstPoint.z);
+    }
+
+    public static Point inverse(Point firstPoint) {
+        if (firstPoint.x == 0 || firstPoint.y == 0 || firstPoint.z == 0) {
+            throw new ArithmeticException("Dividing by zero");
+        }
+        return new Point(1 / firstPoint.x, 1 / firstPoint.y, 1 / firstPoint.z);
     }
 }
