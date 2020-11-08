@@ -24,7 +24,7 @@ public class Points {
         return new Point(firstPoint.x / secondPoint.x, firstPoint.y / secondPoint.y, firstPoint.z / secondPoint.z);
     }
 
-    public static Point enlarge(Point firstPoint, double k) {
-        return new Point(firstPoint.x * k, firstPoint.y * k, firstPoint.z * k);
+    public static Point enlarge(Point firstPoint, double myConstant) {
+        return new Point(firstPoint.x * myConstant, firstPoint.y * myConstant, firstPoint.z * myConstant);
     }
 }

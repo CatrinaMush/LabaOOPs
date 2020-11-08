@@ -51,5 +51,12 @@ public class PointsTest extends TestCase {
     }
 
     public void testEnlarge() {
+        Point firstPoint = new Point(1, -2, 0);
+        double myFirstConstant = 5.1;
+        Point resultPoint = enlarge(firstPoint, myFirstConstant);
+
+        assertEquals(resultPoint.x, 5.1, 0.00001);
+        assertEquals(resultPoint.y, -10.2, 0.00001);
+        assertEquals(resultPoint.z, 0, 0.00001);
     }
 }
