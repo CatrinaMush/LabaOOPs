@@ -1,0 +1,55 @@
+package ru.ssau.tk.oop.propro;
+
+import junit.framework.TestCase;
+
+import static org.junit.Assert.assertThrows;
+import static ru.ssau.tk.oop.propro.Points.*;
+
+public class PointsTest extends TestCase {
+
+    public void testSum() {
+        Point firstPoint = new Point(1.5, 2, 3);
+        Point secondPoint = new Point(8, 9.5, 2.6);
+        Point resultPoint = sum(firstPoint, secondPoint);
+
+        assertEquals(resultPoint.x, 9.5);
+        assertEquals(resultPoint.y, 11.5);
+        assertEquals(resultPoint.z, 5.6);
+    }
+
+    public void testSubtract() {
+        Point firstPoint = new Point(1.5, 2, 3);
+        Point secondPoint = new Point(8, 9.5, 2.6);
+        Point resultPoint = subtract(firstPoint, secondPoint);
+
+        assertEquals(resultPoint.x, -6.5, 0.00001);
+        assertEquals(resultPoint.y, -7.5, 0.00001);
+        assertEquals(resultPoint.z, 0.4, 0.00001);
+    }
+
+    public void testMultiply() {
+        Point firstPoint = new Point(1.5, -2, 0);
+        Point secondPoint = new Point(8, 9.5, 2.6);
+        Point resultPoint = multiply(firstPoint, secondPoint);
+
+        assertEquals(resultPoint.x, 12, 0.00001);
+        assertEquals(resultPoint.y, -19, 0.00001);
+        assertEquals(resultPoint.z, 0, 0.00001);
+    }
+
+    public void testDivide() {
+        Point firstPoint = new Point(16, -1.5, 3);
+        Point secondPoint = new Point(8, 3, 3);
+        Point resultPoint = divide(firstPoint, secondPoint);
+
+        assertEquals(resultPoint.x, 2, 0.00001);
+        assertEquals(resultPoint.y, -0.5, 0.00001);
+        assertEquals(resultPoint.z, 1, 0.00001);
+
+        Point thirdPoint = new Point(0, 0, 0);
+        assertThrows(ArithmeticException.class, () -> divide(firstPoint, thirdPoint));
+    }
+
+    public void testEnlarge() {
+    }
+}
