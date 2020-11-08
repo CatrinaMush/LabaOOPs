@@ -59,4 +59,9 @@ public class PointsTest extends TestCase {
         assertEquals(resultPoint.y, -10.2, 0.00001);
         assertEquals(resultPoint.z, 0, 0.00001);
     }
+
+    public void testLenght() {
+        Point firstPoint = new Point(3, 4, 0);
+        assertEquals(lenght(firstPoint),5,0.00001);
+    }
 }

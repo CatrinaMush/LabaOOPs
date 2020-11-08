@@ -1,5 +1,7 @@
 package ru.ssau.tk.oop.propro;
 
+import static java.lang.StrictMath.sqrt;
+
 public class Point {
     public final double x;
     public final double y;
@@ -16,5 +18,9 @@ public class Point {
         Point secondPoint = new Point(1.025, 3.598, 8.561);
         System.out.print(firstPoint.x + " " + firstPoint.y + " " + firstPoint.z + '\n');
         System.out.print(secondPoint.x + " " + secondPoint.y + " " + secondPoint.z);
+    }
+
+    public double length() {
+        return sqrt(x * x + y * y + z * z);
     }
 }
