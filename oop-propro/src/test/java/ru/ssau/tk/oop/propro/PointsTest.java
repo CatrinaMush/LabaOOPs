@@ -83,4 +83,18 @@ public class PointsTest extends TestCase {
         Point secondPoint = new Point(10, 0, 5);
         assertThrows(ArithmeticException.class, () -> inverse(secondPoint));
     }
+
+    public void testScalarProduct() {
+        Point firstVector = new Point(1, 2, 5);
+        Point secondVector = new Point(2, 0, 3);
+        assertEquals(scalarProduct(firstVector, secondVector), 17, 0.0001);
+    }
+
+    public void testVectorProduct() {
+        Point firstVector = new Point(1, 2, 5);
+        Point secondVector = new Point(2, 0, 3);
+        assertEquals(vectorProduct(firstVector, secondVector).x, 6, 0.0001);
+        assertEquals(vectorProduct(firstVector, secondVector).y, 7, 0.0001);
+        assertEquals(vectorProduct(firstVector, secondVector).z, -4, 0.0001);
+    }
 }
