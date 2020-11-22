@@ -48,4 +48,17 @@ public class MyArraysTest {
         assertEquals(newArray[3], 4);
         assertEquals(newArray[4], 2);
     }
+
+    @Test
+    public void fibonacciNumArray() {
+        int[] newArray = firstArray.fibonacciNumArray(5);
+        assertEquals(newArray[0], 1);
+        assertEquals(newArray[1], 1);
+        assertEquals(newArray[2], 2);
+        assertEquals(newArray[3], 3);
+        assertEquals(newArray[4], 5);
+        int[] veryNewArray = firstArray.fibonacciNumArray(2);
+        assertEquals(newArray[0], 1);
+        assertEquals(newArray[1], 1);
+    }
 }
