@@ -89,4 +89,13 @@ public class MyArrays {
         }
         return myNumbersNotDivisibleByThree;
     }
+
+    public double[] arithmeticProgressionArray(int n, double firstNum, double stepArithmeticProgression) {
+        double[] myArithmeticProgression = new double[n];
+        myArithmeticProgression[0] = firstNum;
+        for (int i = 1; i < n; i++) {
+            myArithmeticProgression[i] = myArithmeticProgression[i - 1] + stepArithmeticProgression;
+        }
+        return myArithmeticProgression;
+    }
 }

@@ -107,4 +107,18 @@ public class MyArraysTest {
         assertEquals(newArray[3], 5);
         assertEquals(newArray[4], 7);
     }
+
+    @Test
+    public void arithmeticProgressionArray() {
+        double[] newArray = firstArray.arithmeticProgressionArray(5, 1.0, 1.2);
+        assertEquals(newArray[0], 1.0, DELTA);
+        assertEquals(newArray[1], 2.2, DELTA);
+        assertEquals(newArray[2], 3.4, DELTA);
+        assertEquals(newArray[3], 4.6, DELTA);
+        assertEquals(newArray[4], 5.8, DELTA);
+
+        double[] veryNewArray = firstArray.arithmeticProgressionArray(2, 2.0, 0);
+        assertEquals(veryNewArray[0], 2.0, DELTA);
+        assertEquals(veryNewArray[1], 2.0, DELTA);
+    }
 }
