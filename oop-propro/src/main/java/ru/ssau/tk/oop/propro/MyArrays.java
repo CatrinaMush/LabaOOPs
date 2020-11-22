@@ -98,4 +98,13 @@ public class MyArrays {
         }
         return myArithmeticProgression;
     }
+
+    public double[] geometricProgressionArray(int n, double firstNum, double denominatorOfProgression) {                  //2.10 геометрическая прогрессия
+        double[] myGeometricProgression = new double[n];
+        myGeometricProgression[0] = firstNum;
+        for (int i = 1; i < n; i++) {
+            myGeometricProgression[i] = myGeometricProgression[i - 1] * denominatorOfProgression;
+        }
+        return myGeometricProgression;
+    }
 }

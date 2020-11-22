@@ -121,4 +121,20 @@ public class MyArraysTest {
         assertEquals(veryNewArray[0], 2.0, DELTA);
         assertEquals(veryNewArray[1], 2.0, DELTA);
     }
+
+    @Test
+    public void geometricProgressionArray() {
+        double[] newArray = firstArray.geometricProgressionArray(5, 1.0, 1.5);
+        assertEquals(newArray[0], 1.0, DELTA);
+        assertEquals(newArray[1], 1.5, DELTA);
+        assertEquals(newArray[2], 2.25, DELTA);
+        assertEquals(newArray[3], 3.375, DELTA);
+        assertEquals(newArray[4], 5.0625, DELTA);
+
+        double[] veryNewArray = firstArray.geometricProgressionArray(4, 1.0, 0.5);
+        assertEquals(veryNewArray[0], 1.0, DELTA);
+        assertEquals(veryNewArray[1], 0.5, DELTA);
+        assertEquals(veryNewArray[2], 0.25, DELTA);
+        assertEquals(veryNewArray[3], 0.125, DELTA);
+    }
 }
