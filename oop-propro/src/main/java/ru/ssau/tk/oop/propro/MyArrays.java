@@ -1,5 +1,7 @@
 package ru.ssau.tk.oop.propro;
 
+import static java.lang.StrictMath.sqrt;
+
 public class MyArrays {
 
     public int[] arrayLength(int l) {
@@ -52,5 +54,26 @@ public class MyArrays {
             mySqrIndexArray[i] = i * i;
         }
         return mySqrIndexArray;
+    }
+
+    public double[] quadraticEquationResult(double a, double b, double c) {
+        double discriminant = b * b - 4 * a * c;
+        if ((discriminant == 0) & (a > 0)) {
+            double[] result = new double[1];
+            result[0] = -b / (2 * a);
+            return result;
+        }
+        if ((discriminant > 0) & (a > 0)) {
+            double[] result = new double[2];
+            result[0] = (-b - sqrt(discriminant)) / (2 * a);
+            result[1] = (-b + sqrt(discriminant)) / (2 * a);
+            return result;
+        }
+        if (a == 0) {
+            double[] result = new double[1];
+            result[0] = -c / b;
+            return result;
+        }
+        return new double[0];
     }
 }

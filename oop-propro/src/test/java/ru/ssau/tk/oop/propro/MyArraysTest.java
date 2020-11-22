@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 public class MyArraysTest {
 
     MyArrays firstArray = new MyArrays();
+    private final static double DELTA = 0.0001;
 
     @Test
     public void arrayLength() {
@@ -70,5 +71,30 @@ public class MyArraysTest {
         assertEquals(newArray[2], 4);
         assertEquals(newArray[3], 9);
         assertEquals(newArray[4], 16);
+    }
+
+    @Test
+    public void quadraticEquationResult() {
+        double[] firstEquation = firstArray.quadraticEquationResult(2, 3, -27);
+        assertEquals(firstEquation[0], -4.5, DELTA);
+        assertEquals(firstEquation[1], 3, DELTA);
+        assertEquals(firstEquation.length, 2);
+
+        double[] secondEquation = firstArray.quadraticEquationResult(0, 3, 9);
+        assertEquals(secondEquation[0], -3, DELTA);
+        assertEquals(secondEquation.length, 1);
+
+        double[] thirdEquation = firstArray.quadraticEquationResult(1, 2, 16);
+        assertEquals(thirdEquation.length, 0);
+
+        double[] fourthEquation = firstArray.quadraticEquationResult(1, 0, -9);
+        assertEquals(fourthEquation[0], -3, DELTA);
+        assertEquals(fourthEquation[1], 3, DELTA);
+        assertEquals(fourthEquation.length, 2);
+
+        double[] fifthEquation = firstArray.quadraticEquationResult(2, 1, 0);
+        assertEquals(fifthEquation[0], -0.5, DELTA);
+        assertEquals(fifthEquation[1], 0, DELTA);
+        assertEquals(fifthEquation.length, 2);
     }
 }
