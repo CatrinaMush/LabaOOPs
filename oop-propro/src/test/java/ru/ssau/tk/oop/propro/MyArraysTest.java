@@ -28,4 +28,14 @@ public class MyArraysTest {
         assertEquals(veryNewArray[0], 2);
         assertEquals(veryNewArray[1], 2);
     }
+
+    @Test
+    public void increasingOddNumArray() {
+        int[] newArray = firstArray.increasingOddNumArray(5);
+        assertEquals(newArray[0], 1);
+        assertEquals(newArray[1], 3);
+        assertEquals(newArray[2], 5);
+        assertEquals(newArray[3], 7);
+        assertEquals(newArray[4], 9);
+    }
 }
