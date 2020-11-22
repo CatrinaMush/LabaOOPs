@@ -45,4 +45,12 @@ public class MyArrays {
         }
         return fibArray;
     }
+
+    public int[] sqrIndexArray(int l) {
+        int[] mySqrIndexArray = new int[l];
+        for (int i = 0; i < l; i++) {
+            mySqrIndexArray[i] = i * i;
+        }
+        return mySqrIndexArray;
+    }
 }
