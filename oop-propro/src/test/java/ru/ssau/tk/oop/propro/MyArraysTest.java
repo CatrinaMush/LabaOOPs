@@ -97,4 +97,14 @@ public class MyArraysTest {
         assertEquals(fifthEquation[1], 0, DELTA);
         assertEquals(fifthEquation.length, 2);
     }
+
+    @Test
+    public void numbersNotDivisibleByThree() {
+        int[] newArray = firstArray.numbersNotDivisibleByThree(5);
+        assertEquals(newArray[0], 1);
+        assertEquals(newArray[1], 2);
+        assertEquals(newArray[2], 4);
+        assertEquals(newArray[3], 5);
+        assertEquals(newArray[4], 7);
+    }
 }

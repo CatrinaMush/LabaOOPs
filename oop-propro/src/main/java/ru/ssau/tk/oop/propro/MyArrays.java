@@ -76,4 +76,17 @@ public class MyArrays {
         }
         return new double[0];
     }
+
+    public int[] numbersNotDivisibleByThree(int l) {
+        int[] myNumbersNotDivisibleByThree = new int[l];
+        int k = 1;
+        for (int i = 0; i < l; i++) {
+            myNumbersNotDivisibleByThree[i] = k;
+            k++;
+            if (k % 3 == 0) {
+                k++;
+            }
+        }
+        return myNumbersNotDivisibleByThree;
+    }
 }
