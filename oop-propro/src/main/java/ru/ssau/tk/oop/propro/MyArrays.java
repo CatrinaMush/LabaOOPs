@@ -132,4 +132,14 @@ public class MyArrays {
         }
         return false;
     }
+
+    public int countEvenNumbers(int[] numbers) {
+        int k = 0;
+        for (int number : numbers) {
+            if (number % 2 == 0) {
+                k++;
+            }
+        }
+        return k;
+    }
 }

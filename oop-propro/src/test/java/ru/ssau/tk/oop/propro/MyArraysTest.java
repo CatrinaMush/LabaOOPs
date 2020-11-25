@@ -163,4 +163,12 @@ public class MyArraysTest {
         assertTrue(firstArray.checkNullArray(firstCheckArray));
         assertFalse(firstArray.checkNullArray(secondCheckArray));
     }
+
+    @Test
+    public void countEvenNumbers() {
+        int[] firstCheckArray = {1, 0, 8, 4, 6};
+        int[] secondCheckArray = {-1, -4, 2, 1, 0};
+        assertEquals(firstArray.countEvenNumbers(firstCheckArray), 4);
+        assertEquals(firstArray.countEvenNumbers(secondCheckArray), 3);
+    }
 }
