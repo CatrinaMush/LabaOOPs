@@ -166,4 +166,17 @@ public class MyArrays {
         return sum;
     }
 
+    public boolean countingDivisors(int[] arrayValues) {
+        int countForFirstValue = 0;
+        int countForLastValue = 0;
+        for (int value : arrayValues) {
+            if (value % arrayValues[0] == 0) {
+                countForFirstValue++;
+            }
+            if (value % arrayValues[arrayValues.length - 1] == 0) {
+                countForLastValue++;
+            }
+        }
+        return countForFirstValue > countForLastValue;
+    }
 }

@@ -189,4 +189,12 @@ public class MyArraysTest {
         assertEquals(firstArray.sumOfEvenIndex(firstCheckArray), 15);
         assertEquals(firstArray.sumOfEvenIndex(secondCheckArray), 1);
     }
+
+    @Test
+    public void countingDivisors() {
+        int[] firstCheckArray = {1, 2, 8, 4, 6};
+        int[] secondCheckArray = {5, 6, 9, 1, 3};
+        assertTrue(firstArray.countingDivisors(firstCheckArray));
+        assertFalse(firstArray.countingDivisors(secondCheckArray));
+    }
 }
