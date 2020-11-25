@@ -197,4 +197,23 @@ public class MyArraysTest {
         assertTrue(firstArray.countingDivisors(firstCheckArray));
         assertFalse(firstArray.countingDivisors(secondCheckArray));
     }
+
+
+    @Test
+    public void symmetricArray() {
+        int[] newArray = firstArray.symmetricArray(7);
+        assertEquals(newArray[0], 1);
+        assertEquals(newArray[1], 2);
+        assertEquals(newArray[2], 3);
+        assertEquals(newArray[3], 4);
+        assertEquals(newArray[4], 3);
+        assertEquals(newArray[5], 2);
+        assertEquals(newArray[6], 1);
+        int[] newSecondArray = firstArray.symmetricArray(4);
+        assertEquals(newSecondArray[0], 1);
+        assertEquals(newSecondArray[1], 2);
+        assertEquals(newSecondArray[2], 2);
+        assertEquals(newSecondArray[3], 1);
+        assertNull(firstArray.symmetricArray(0));
+    }
 }

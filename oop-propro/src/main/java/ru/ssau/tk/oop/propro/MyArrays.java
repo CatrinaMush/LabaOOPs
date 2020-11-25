@@ -179,4 +179,29 @@ public class MyArrays {
         }
         return countForFirstValue > countForLastValue;
     }
+
+    public int[] symmetricArray(int l) {
+        if (l == 0) {
+            return null;
+        }
+        int[] symmetric = new int[l];
+        for (int i = 0; i <= (l / 2); i++) {
+            symmetric[i] = i + 1;
+        }
+        if (l % 2 != 0) {
+            int j = l / 2;
+            for (int i = l / 2 + 1; i < l; i++) {
+                symmetric[i] = j;
+                j--;
+            }
+        }
+        if (l % 2 == 0) {
+            int j = (l / 2);
+            for (int i = l / 2; i < l; i++) {
+                symmetric[i] = j;
+                j--;
+            }
+        }
+        return symmetric;
+    }
 }
