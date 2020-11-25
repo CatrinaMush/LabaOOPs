@@ -171,4 +171,14 @@ public class MyArraysTest {
         assertEquals(firstArray.countEvenNumbers(firstCheckArray), 4);
         assertEquals(firstArray.countEvenNumbers(secondCheckArray), 3);
     }
+
+    @Test
+    public void findMax() {
+        int[] firstCheckArray = {1, 0, 8, 4, 6};
+        int[] secondCheckArray = {-1, -4, 2, 1, 0};
+        int[] thirdCheckArray = {};
+        assertEquals(firstArray.findMax(firstCheckArray), new Integer(8));
+        assertEquals(firstArray.findMax(secondCheckArray), new Integer(2));
+        assertNull(firstArray.findMax(thirdCheckArray));
+    }
 }
