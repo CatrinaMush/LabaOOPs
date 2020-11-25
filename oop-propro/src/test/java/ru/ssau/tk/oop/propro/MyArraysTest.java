@@ -181,4 +181,12 @@ public class MyArraysTest {
         assertEquals(firstArray.findMax(secondCheckArray), new Integer(2));
         assertNull(firstArray.findMax(thirdCheckArray));
     }
+
+    @Test
+    public void sumOfEvenIndex() {
+        int[] firstCheckArray = {1, 0, 8, 4, 6};
+        int[] secondCheckArray = {-1, -4, 2, 1, 0, 5};
+        assertEquals(firstArray.sumOfEvenIndex(firstCheckArray), 15);
+        assertEquals(firstArray.sumOfEvenIndex(secondCheckArray), 1);
+    }
 }

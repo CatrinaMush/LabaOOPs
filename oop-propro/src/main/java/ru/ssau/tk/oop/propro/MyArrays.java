@@ -155,4 +155,15 @@ public class MyArrays {
         }
         return null;
     }
+
+    public int sumOfEvenIndex(int[] arrayValues) {
+        int sum = 0;
+        for (int i = 0; i < arrayValues.length; i++) {
+            if (i % 2 == 0) {
+                sum += arrayValues[i];
+            }
+        }
+        return sum;
+    }
+
 }
