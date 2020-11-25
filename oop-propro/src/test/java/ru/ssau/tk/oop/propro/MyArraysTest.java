@@ -137,4 +137,14 @@ public class MyArraysTest {
         assertEquals(veryNewArray[2], 0.25, DELTA);
         assertEquals(veryNewArray[3], 0.125, DELTA);
     }
+
+    @Test
+    public void changeSignArray() {
+        int[] array = {1, 0, -2, 3};
+        firstArray.changeSignArray(array);
+        assertEquals(array[0], -1);
+        assertEquals(array[1], 0);
+        assertEquals(array[2], 2);
+        assertEquals(array[3], -3);
+    }
 }

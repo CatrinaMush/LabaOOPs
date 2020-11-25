@@ -1,5 +1,6 @@
 package ru.ssau.tk.oop.propro;
 
+import static java.lang.Math.abs;
 import static java.lang.StrictMath.sqrt;
 
 public class MyArrays {
@@ -99,12 +100,18 @@ public class MyArrays {
         return myArithmeticProgression;
     }
 
-    public double[] geometricProgressionArray(int n, double firstNum, double denominatorOfProgression) {                  //2.10 геометрическая прогрессия
+    public double[] geometricProgressionArray(int n, double firstNum, double denominatorOfProgression) {
         double[] myGeometricProgression = new double[n];
         myGeometricProgression[0] = firstNum;
         for (int i = 1; i < n; i++) {
             myGeometricProgression[i] = myGeometricProgression[i - 1] * denominatorOfProgression;
         }
         return myGeometricProgression;
+    }
+
+    public void changeSignArray(int[] anotherSignArray) {
+        for (int i = 0; i < anotherSignArray.length; i++) {
+            anotherSignArray[i] = -1 * anotherSignArray[i];
+        }
     }
 }
