@@ -114,4 +114,13 @@ public class MyArrays {
             anotherSignArray[i] = -1 * anotherSignArray[i];
         }
     }
+
+    public boolean findNumberInArray(int[] array, int n) {
+        for (int j : array) {
+            if (j == n) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

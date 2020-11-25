@@ -147,4 +147,12 @@ public class MyArraysTest {
         assertEquals(array[2], 2);
         assertEquals(array[3], -3);
     }
+
+    @Test
+    public void findNumberInArray() {
+        int[] array = {0, 1, 2, 4, 6};
+        assertFalse(firstArray.findNumberInArray(array, 5));
+        assertTrue(firstArray.findNumberInArray(array, 2));
+        assertFalse(firstArray.findNumberInArray(array, 7));
+    }
 }
