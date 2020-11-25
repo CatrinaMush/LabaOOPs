@@ -123,4 +123,13 @@ public class MyArrays {
         }
         return false;
     }
+
+    public boolean checkNullArray(Integer[] array) {
+        for (Integer j : array) {
+            if (j == null) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

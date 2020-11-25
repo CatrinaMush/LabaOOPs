@@ -155,4 +155,12 @@ public class MyArraysTest {
         assertTrue(firstArray.findNumberInArray(array, 2));
         assertFalse(firstArray.findNumberInArray(array, 7));
     }
+
+    @Test
+    public void checkNullArray() {
+        Integer[] firstCheckArray = {1, 0, null, 4, 6};
+        Integer[] secondCheckArray = {1, 0, 2, 4, 6};
+        assertTrue(firstArray.checkNullArray(firstCheckArray));
+        assertFalse(firstArray.checkNullArray(secondCheckArray));
+    }
 }
