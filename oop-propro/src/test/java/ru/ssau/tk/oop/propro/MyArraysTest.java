@@ -216,4 +216,18 @@ public class MyArraysTest {
         assertEquals(newSecondArray[3], 1);
         assertNull(firstArray.symmetricArray(0));
     }
+
+
+    @Test
+    public void testGetArrayDivisors() {
+        int[] myFirstArray = firstArray.getArrayDivisors(15);
+        int[] firstResult = {1, -1, 3, -3, -5, 5, -15, 15};
+        for (int i = 0; i < myFirstArray.length; i++)
+            assertEquals(myFirstArray[i], firstResult[i]);
+
+        int[] mySecondArray = firstArray.getArrayDivisors(-7);
+        int[] secondResult = {1, -1, -3, 3};
+        for (int i = 0; i < myFirstArray.length; i++)
+            assertEquals(mySecondArray[i], secondResult[i]);
+    }
 }

@@ -204,4 +204,29 @@ public class MyArrays {
         }
         return symmetric;
     }
+
+    public int[] getArrayDivisors(int c) {
+        int count = 0;
+        for (int i = 1; i <= (int) sqrt(abs(c)); i++) {
+            if (abs(c) % i == 0) {
+                count += 1;
+            }
+        }
+        count = 2 * count - (sqrt(abs(c)) == (int) sqrt(abs(c)) ? 1 : 0);
+        count *= 2;
+        int[] arrayDivisors = new int[count];
+        for (int j = 0, k = 0; j != (int) sqrt(abs(c)); j++) {
+            if (abs(c) % (j + 1) == 0) {
+                arrayDivisors[k] = j + 1;
+                arrayDivisors[count - 1 - k] = abs(c) / (j + 1);
+                k += 1;
+            }
+            if (abs(c) % (j + 1) == 0) {
+                arrayDivisors[k] = -(j + 1);
+                arrayDivisors[count - 1 - k] = -(abs(c) / (j + 1));
+                k += 1;
+            }
+        }
+        return arrayDivisors;
+    }
 }
