@@ -229,4 +229,13 @@ public class MyArrays {
         }
         return arrayDivisors;
     }
+
+    public int findIndexOfNumber(int[] arrayvValues, int number) {
+        for (int i = 0; i < arrayvValues.length; i++) {
+            if (arrayvValues[i] == number) {
+                return i;
+            }
+        }
+        return 0;
+    }
 }

@@ -230,4 +230,12 @@ public class MyArraysTest {
         for (int i = 0; i < myFirstArray.length; i++)
             assertEquals(mySecondArray[i], secondResult[i]);
     }
+
+    @Test
+    public void findIndexOfNumber() {
+        int[] newArray = {1, 2, 3, 4, 5, 6, 7, 8};
+        assertEquals(firstArray.findIndexOfNumber(newArray, 1), 0);
+        assertEquals(firstArray.findIndexOfNumber(newArray, 4), 3);
+        assertEquals(firstArray.findIndexOfNumber(newArray, 8), 7);
+    }
 }
