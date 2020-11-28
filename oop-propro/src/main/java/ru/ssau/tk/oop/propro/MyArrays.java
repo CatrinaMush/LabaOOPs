@@ -264,9 +264,9 @@ public class MyArrays {
         }
     }
 
-    public int meanValueArray(int[] arrayValues) {
+    public int meanValueArray(double[] arrayValues) {
         int sum = 0;
-        for (int arrayValue : arrayValues) {
+        for (double arrayValue : arrayValues) {
             sum += arrayValue;
         }
         return sum / arrayValues.length;
