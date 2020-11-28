@@ -275,4 +275,12 @@ public class MyArraysTest {
         double[] newSecondArray = {-2, 5, -6};
         assertEquals(firstArray.meanValueArray(newSecondArray), -1, DELTA);
     }
+
+    @Test
+    public void dispertionValueArray() {
+        double[] newFirstArray = {2, 2, 5, 7};
+        assertEquals(firstArray.dispertionValueArray(newFirstArray), 4.5, DELTA);
+        double[] newSecondArray = {-2, 5, -6};
+        assertEquals(firstArray.dispertionValueArray(newSecondArray), 20.6667, DELTA);
+    }
 }

@@ -1,6 +1,7 @@
 package ru.ssau.tk.oop.propro;
 
 import static java.lang.Math.abs;
+import static java.lang.Math.pow;
 import static java.lang.StrictMath.sqrt;
 
 public class MyArrays {
@@ -270,5 +271,14 @@ public class MyArrays {
             sum += arrayValue;
         }
         return sum / arrayValues.length;
+    }
+
+    public double dispertionValueArray(double[] arrayValues) {
+        double sumSqrValues = 0;
+        for (double arrayValue : arrayValues) {
+            sumSqrValues += pow(arrayValue, 2);
+        }
+        double meanSqrValues = sumSqrValues / arrayValues.length;
+        return meanSqrValues - pow(meanValueArray(arrayValues), 2);
     }
 }
