@@ -252,4 +252,19 @@ public class MyArraysTest {
         for (int i = 0; i < mySecondArray.length; i++)
             assertEquals(mySecondArray[i], resultSecondArray[i]);
     }
+
+    @Test
+    public void bitWiseNegation() {
+        int[] newFirstArray = {12, 15, 56};
+        firstArray.bitWiseNegation(newFirstArray);
+        int[] resultFirstArray = {-13, -16, -57};
+        for (int i = 0; i < newFirstArray.length; i++)
+            assertEquals(newFirstArray[i], resultFirstArray[i]);
+
+        int[] newSecondArray = {-2, 5, -6};
+        firstArray.bitWiseNegation(newSecondArray);
+        int[] resultSecondArray = {1, -6, 5};
+        for (int i = 0; i < newSecondArray.length; i++)
+            assertEquals(newSecondArray[i], resultSecondArray[i]);
+    }
 }

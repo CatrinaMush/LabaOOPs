@@ -257,4 +257,10 @@ public class MyArrays {
         array[indexMax] = min;
         array[indexMin] = max;
     }
+
+    public void bitWiseNegation(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ~array[i];
+        }
+    }
 }
