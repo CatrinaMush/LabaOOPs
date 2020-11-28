@@ -2,7 +2,7 @@ package ru.ssau.tk.oop.propro;
 
 import static java.lang.Math.*;
 
-public class randomWalk {
+public class RandomWalk {
 
     public static void main(String[] args) {
 
