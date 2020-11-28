@@ -238,4 +238,23 @@ public class MyArrays {
         }
         return 0;
     }
+
+    public void exchangedMaxAndMin(int[] array) {
+        int min = array[0];
+        int indexMin = 0;
+        int max = array[0];
+        int indexMax = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                indexMax = i;
+            }
+            if (array[i] < min) {
+                min = array[i];
+                indexMin = i;
+            }
+        }
+        array[indexMax] = min;
+        array[indexMin] = max;
+    }
 }

@@ -238,4 +238,18 @@ public class MyArraysTest {
         assertEquals(firstArray.findIndexOfNumber(newArray, 4), 3);
         assertEquals(firstArray.findIndexOfNumber(newArray, 8), 7);
     }
+
+    @Test
+    public void exchangedMaxAndMin() {
+        int[] myFirstArray = {1, 2, 3, 5, 6};
+        firstArray.exchangedMaxAndMin(myFirstArray);
+        int[] resultFirstArray = {6, 2, 3, 5, 1};
+        for (int i = 0; i < myFirstArray.length; i++)
+            assertEquals(myFirstArray[i], resultFirstArray[i]);
+        int[] mySecondArray = {0, 1, 2, 0, 8};
+        firstArray.exchangedMaxAndMin(mySecondArray);
+        int[] resultSecondArray = {8, 1, 2, 0, 0};
+        for (int i = 0; i < mySecondArray.length; i++)
+            assertEquals(mySecondArray[i], resultSecondArray[i]);
+    }
 }
