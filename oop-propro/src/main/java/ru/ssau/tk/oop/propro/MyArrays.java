@@ -263,4 +263,12 @@ public class MyArrays {
             array[i] = ~array[i];
         }
     }
+
+    public int meanValueArray(int[] arrayValues) {
+        int sum = 0;
+        for (int arrayValue : arrayValues) {
+            sum += arrayValue;
+        }
+        return sum / arrayValues.length;
+    }
 }

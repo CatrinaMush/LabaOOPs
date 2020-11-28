@@ -267,4 +267,12 @@ public class MyArraysTest {
         for (int i = 0; i < newSecondArray.length; i++)
             assertEquals(newSecondArray[i], resultSecondArray[i]);
     }
+
+    @Test
+    public void meanValueArray() {
+        int[] newFirstArray = {2, 2, 5, 7};
+        assertEquals(firstArray.meanValueArray(newFirstArray), 4, DELTA);
+        int[] newSecondArray = {-2, 5, -6};
+        assertEquals(firstArray.meanValueArray(newSecondArray), -1, DELTA);
+    }
 }
