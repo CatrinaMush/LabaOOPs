@@ -10,5 +10,6 @@ public class MonteCarloTest {
     @Test
     public void integrate() {
         assertEquals(result.integrate(0.0, Math.PI/2, 4000), 1, 0.01);
+        assertEquals(result.integrate(0.0, Math.PI, 7000), 2, 0.01);
     }
 }
