@@ -14,4 +14,8 @@ public class MyStrings {
             System.out.println(myByte);
         }
     }
+
+    public boolean palindromeCheck(String myString) {
+        return myString.equals(new StringBuilder(myString).reverse().toString());
+    }
 }

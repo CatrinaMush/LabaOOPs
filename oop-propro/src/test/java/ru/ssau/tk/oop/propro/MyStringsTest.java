@@ -21,4 +21,11 @@ public class MyStringsTest {
         myFirstString.byteMyString("Привет");
         System.out.println("");
     }
+
+    @Test
+    public void palindromeCheck() {
+        assertTrue(myFirstString.palindromeCheck("lol"));
+        assertFalse(myFirstString.palindromeCheck("hell"));
+        assertTrue(myFirstString.palindromeCheck("x"));
+    }
 }
