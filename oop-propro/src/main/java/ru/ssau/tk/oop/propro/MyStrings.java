@@ -8,9 +8,10 @@ public class MyStrings {
         }
     }
 
-    public static void main(String[] args) {
-        MyStrings myFirstString = new MyStrings();
-        myFirstString.outputMyString("I do not have time for anything :(");
-        System.out.println("");
+    public void byteMyString(String myString) {
+        byte[] myStringBytes = myString.getBytes();
+        for (byte myByte : myStringBytes) {
+            System.out.println(myByte);
+        }
     }
 }
