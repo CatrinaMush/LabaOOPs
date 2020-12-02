@@ -26,4 +26,9 @@ public class MyStrings {
     public int findSubstringInSecondHalfString(String firstString, String secondString) {
         return firstString.indexOf(secondString, firstString.length() / 2);
     }
+
+
+    public int lastInFirstLineOfFirstLine(String firstString, String secondString) {
+        return firstString.lastIndexOf(secondString, firstString.length() / 2);
+    }
 }

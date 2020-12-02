@@ -45,4 +45,11 @@ public class MyStringsTest {
         assertEquals(myFirstString.findSubstringInSecondHalfString("kek", "e"), 1);
         assertEquals(myFirstString.findSubstringInSecondHalfString("kek", "k"), 2);
     }
+
+    @Test
+    public void lastInFirstLineOfFirstLine() {
+        assertEquals(myFirstString.lastInFirstLineOfFirstLine("lolololo", "lo"), 4);
+        assertEquals(myFirstString.lastInFirstLineOfFirstLine("meowmeowmeow", "meow"), 4);
+        assertEquals(myFirstString.lastInFirstLineOfFirstLine("lolnot", "b"), -1);
+    }
 }
