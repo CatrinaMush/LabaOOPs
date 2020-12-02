@@ -22,4 +22,8 @@ public class MyStrings {
     public int findSubstringInString(String firstString, String secondString) {
         return firstString.indexOf(secondString);
     }
+
+    public int findSubstringInSecondHalfString(String firstString, String secondString) {
+        return firstString.indexOf(secondString, firstString.length() / 2);
+    }
 }

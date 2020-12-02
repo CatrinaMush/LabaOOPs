@@ -36,4 +36,13 @@ public class MyStringsTest {
         assertEquals(myFirstString.findSubstringInString("dogs", "s"), 3);
         assertEquals(myFirstString.findSubstringInString("night", "y"), -1);
     }
+
+    @Test
+    public void findSubstringInSecondHalfString() {
+        assertEquals(myFirstString.findSubstringInSecondHalfString("apple", "ple"), 2);
+        assertEquals(myFirstString.findSubstringInSecondHalfString("orange", "or"), -1);
+        assertEquals(myFirstString.findSubstringInSecondHalfString("kiwi", "w"), 2);
+        assertEquals(myFirstString.findSubstringInSecondHalfString("kek", "e"), 1);
+        assertEquals(myFirstString.findSubstringInSecondHalfString("kek", "k"), 2);
+    }
 }
