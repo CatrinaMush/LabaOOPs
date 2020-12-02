@@ -31,4 +31,11 @@ public class MyStrings {
     public int lastInFirstLineOfFirstLine(String firstString, String secondString) {
         return firstString.lastIndexOf(secondString, firstString.length() / 2);
     }
+
+    public String newString(String firstString, String secondString, String thirdString) {
+        for (int i = 0; i < 100 && firstString.contains(secondString); i++) {
+            firstString = firstString.replaceAll(secondString, thirdString);
+        }
+        return firstString;
+    }
 }

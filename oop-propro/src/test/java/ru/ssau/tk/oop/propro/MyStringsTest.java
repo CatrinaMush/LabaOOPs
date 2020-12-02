@@ -52,4 +52,10 @@ public class MyStringsTest {
         assertEquals(myFirstString.lastInFirstLineOfFirstLine("meowmeowmeow", "meow"), 4);
         assertEquals(myFirstString.lastInFirstLineOfFirstLine("lolnot", "b"), -1);
     }
+
+    @Test
+    public void newString() {
+        assertEquals(myFirstString.newString("karina", "ina", "na"), "karna");
+        assertEquals(myFirstString.newString("applebanana", "banana", "na"), "applena");
+    }
 }
