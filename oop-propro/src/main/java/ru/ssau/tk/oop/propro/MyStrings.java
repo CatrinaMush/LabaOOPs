@@ -18,4 +18,8 @@ public class MyStrings {
     public boolean palindromeCheck(String myString) {
         return myString.equals(new StringBuilder(myString).reverse().toString());
     }
+
+    public int findSubstringInString(String firstString, String secondString) {
+        return firstString.indexOf(secondString);
+    }
 }

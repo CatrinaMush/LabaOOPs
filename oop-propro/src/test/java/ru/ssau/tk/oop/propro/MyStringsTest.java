@@ -28,4 +28,12 @@ public class MyStringsTest {
         assertFalse(myFirstString.palindromeCheck("hell"));
         assertTrue(myFirstString.palindromeCheck("x"));
     }
+
+    @Test
+    public void findSubstringInString() {
+        assertEquals(myFirstString.findSubstringInString("cats", "ca"), 0);
+        assertEquals(myFirstString.findSubstringInString("phone", "one"), 2);
+        assertEquals(myFirstString.findSubstringInString("dogs", "s"), 3);
+        assertEquals(myFirstString.findSubstringInString("night", "y"), -1);
+    }
 }
