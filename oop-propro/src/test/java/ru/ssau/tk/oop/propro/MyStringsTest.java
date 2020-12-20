@@ -97,4 +97,9 @@ public class MyStringsTest {
         String[] str = {"one", "two", "three", "four", "five"};
         assertEquals(MyStrings.getUnifiedStr(str), "one, two, three, four, five");
     }
+
+    @Test
+    public void codeInSomeStrings() {
+        System.out.println(MyStrings.codeInSomeStrings("fdjfndfsj"));
+    }
 }

@@ -1,5 +1,8 @@
 package ru.ssau.tk.oop.propro;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+
 public class MyStrings {
 
     public void outputMyString(String myString) {
@@ -81,5 +84,10 @@ public class MyStrings {
 
     public static String getUnifiedStr(String[] array) {
         return String.join(", ", array);
+    }
+
+    public static String codeInSomeStrings(String string) {
+        byte[] byteString = string.getBytes(Charset.defaultCharset());
+        return new String(byteString, StandardCharsets.UTF_16);
     }
 }
