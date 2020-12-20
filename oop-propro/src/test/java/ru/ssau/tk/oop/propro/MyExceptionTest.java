@@ -13,7 +13,7 @@ public class MyExceptionTest {
         assertEquals(MyException.getObjectPerson(p1), "Karina Mushankova");
         Person p2 = new Person(null, null);
         Assert.assertThrows(NullPointerException.class, () -> {
-            assertNull(p2);
+            MyException.getObjectPerson(p2);
         });
     }
 
@@ -25,10 +25,10 @@ public class MyExceptionTest {
                 () -> assertEquals(MyException.getSymbolOnIndex(str, 1),
                         new String[]{"", "e", "", "a", "l"}));
         Assert.assertThrows(NullPointerException.class,
-                () -> assertNull(MyException.getSymbolOnIndex(null, 0)));
+                () -> MyException.getSymbolOnIndex(null, 0));
         String[] str1 = {null, "null"};
         Assert.assertThrows(NullPointerException.class,
-                () -> assertNull(MyException.getSymbolOnIndex(str1, 0)));
+                () -> MyException.getSymbolOnIndex(str1, 0));
     }
 
     @Test
