@@ -293,4 +293,14 @@ public class MyArraysTest {
         for (int i = 0; i < yesArray.length; i++)
             assertEquals(firstArray.arrayBitwiseNot(firstArray.arrayBitwiseNot(yesArray))[i], yesArray[i]);
     }
+
+    @Test
+    public void findMostCommonElement() {
+        int[] checkNumbers = {1, 1, 1, 2, 3, 3, 3, 4, 7, 6, 5};
+        assertEquals(firstArray.findMostCommonElement(checkNumbers), 1);
+        int[] checkNumbersTwo = {1, 2, 3, 4, 5, 11, 47, 89, 5, 32, 5, 4};
+        assertEquals(firstArray.findMostCommonElement(checkNumbersTwo), 4);
+        int[] checkNumbersThree = {0, -2, 3, 0, -5, 0, -4, 6, 0, 6};
+        assertEquals(firstArray.findMostCommonElement(checkNumbersThree), 0);
+    }
 }
