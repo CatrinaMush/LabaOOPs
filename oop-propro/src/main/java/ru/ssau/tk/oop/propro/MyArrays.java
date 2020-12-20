@@ -308,4 +308,12 @@ public class MyArrays {
         }
         return 0;
     }
+
+    public boolean[] findEvenNumbers(int[] array) {
+        boolean[] bool = new boolean[array.length];
+        for (int i = 0; i < array.length; i++) {
+            bool[i] = array[i] % 2 == 0;
+        }
+        return bool;
+    }
 }

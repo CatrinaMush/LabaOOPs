@@ -303,4 +303,17 @@ public class MyArraysTest {
         int[] checkNumbersThree = {0, -2, 3, 0, -5, 0, -4, 6, 0, 6};
         assertEquals(firstArray.findMostCommonElement(checkNumbersThree), 0);
     }
+
+    @Test
+    public void findEvenNumbers() {
+        int[] arrayOne = {1, 2, 3, 4, 5};
+        boolean[] checkArrOne = new boolean[]{false, true, false, true, false};
+        for (int i = 0; i < arrayOne.length; i++)
+            assertEquals(firstArray.findEvenNumbers(arrayOne)[i], checkArrOne[i]);
+
+        int[] arrayTwo = {-1, 3, -5, 4, 0};
+        boolean[] checkArrTwo = new boolean[]{false, false, false, true, true};
+        for (int i = 0; i < arrayOne.length; i++)
+            assertEquals(firstArray.findEvenNumbers(arrayTwo)[i], checkArrTwo[i]);
+    }
 }
