@@ -58,4 +58,14 @@ public class MyStringsTest {
         assertEquals(myFirstString.newString("karina", "ina", "na"), "karna");
         assertEquals(myFirstString.newString("applebanana", "banana", "na"), "applena");
     }
+
+    @Test
+    public void isSameRegister() {
+        assertFalse(myFirstString.isSameRegister("111", "111"));
+        assertTrue(myFirstString.isSameRegister("AAA", "aaa"));
+        assertTrue(myFirstString.isSameRegister("Aaa", "aaa"));
+        assertFalse(myFirstString.isSameRegister("AAA", "aa"));
+        assertFalse(myFirstString.isSameRegister("", "aaa"));
+        assertFalse(myFirstString.isSameRegister("", ""));
+    }
 }

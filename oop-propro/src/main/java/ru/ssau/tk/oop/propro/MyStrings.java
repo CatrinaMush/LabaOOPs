@@ -38,4 +38,8 @@ public class MyStrings {
         }
         return firstString;
     }
+
+    public boolean isSameRegister(String firstString, String secondString) {
+        return firstString.equalsIgnoreCase(secondString) && !firstString.equals(secondString);
+    }
 }
