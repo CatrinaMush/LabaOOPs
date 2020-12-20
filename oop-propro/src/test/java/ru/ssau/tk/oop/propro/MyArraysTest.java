@@ -283,4 +283,14 @@ public class MyArraysTest {
         double[] newSecondArray = {-2, 5, -6};
         assertEquals(firstArray.dispertionValueArray(newSecondArray), 20.6667, DELTA);
     }
+
+    @Test
+    public void arrayBitwiseNot() {
+        int[] yesArray = {7, 16, -9};
+        int[] notArray = new int[]{-8, -17, 8};
+        for (int i = 0; i < yesArray.length; i++)
+            assertEquals(firstArray.arrayBitwiseNot(yesArray)[i], notArray[i]);
+        for (int i = 0; i < yesArray.length; i++)
+            assertEquals(firstArray.arrayBitwiseNot(firstArray.arrayBitwiseNot(yesArray))[i], yesArray[i]);
+    }
 }
