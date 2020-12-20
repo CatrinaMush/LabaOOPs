@@ -82,4 +82,13 @@ public class MyStringsTest {
         assertEquals(myFirstString.newCountOfStrings(new String[]{"river  ", "dog    ", "dry long", "respect bigger", "among"}, "r", "r"), 2);
         assertEquals(myFirstString.newCountOfStrings(new String[]{"    river", "    dog", "    dry long", "respect bigger  ", "among"}, "l", "l"), 0);
     }
+
+    @Test
+    public void getSubstringInString() {
+        assertEquals(myFirstString.getSubstringInString("I believe i can fly", 1, 1), "");
+        assertEquals(myFirstString.getSubstringInString("I believe i can fly", 5, 7), "ie");
+        assertEquals(myFirstString.getSubstringInString("I believe i can fly", -10, 3), "I b");
+        assertEquals(myFirstString.getSubstringInString("I believe i can fly", 0, 1), "I");
+        assertEquals(myFirstString.getSubstringInString("I believe i can fly", 10, 50), "i can fly");
+    }
 }
