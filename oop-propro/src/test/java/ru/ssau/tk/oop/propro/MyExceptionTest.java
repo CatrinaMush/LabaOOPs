@@ -40,4 +40,15 @@ public class MyExceptionTest {
         Assert.assertThrows(ArrayIndexOutOfBoundsException.class,
                 () -> MyException.getCharOnIndex(str, 0, 30));
     }
+
+    @Test
+    public void getIntOfString() {
+        System.out.println(MyException.getIntOfString("10", "5"));
+        Assert.assertThrows(ArithmeticException.class,
+                () -> MyException.getIntOfString("10", "0"));
+        Assert.assertThrows(NumberFormatException.class,
+                () -> MyException.getIntOfString("r", "1"));
+        Assert.assertThrows(NumberFormatException.class,
+                () -> MyException.getIntOfString("r", "a"));
+    }
 }
