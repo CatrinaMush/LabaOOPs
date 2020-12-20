@@ -46,4 +46,9 @@ public class Person {
         this.lastName = lastName;
         this.passportId = passportId;
     }
+
+    @Override
+    public String toString() {
+        return firstName + (firstName.isEmpty() || lastName.isEmpty() ? "" : " ") + lastName;
+    }
 }
