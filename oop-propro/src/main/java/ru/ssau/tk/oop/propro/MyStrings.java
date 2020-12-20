@@ -78,4 +78,8 @@ public class MyStrings {
         }
         return str.substring(from, to);
     }
+
+    public static String getUnifiedStr(String[] array) {
+        return String.join(", ", array);
+    }
 }

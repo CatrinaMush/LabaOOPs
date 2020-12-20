@@ -91,4 +91,10 @@ public class MyStringsTest {
         assertEquals(myFirstString.getSubstringInString("I believe i can fly", 0, 1), "I");
         assertEquals(myFirstString.getSubstringInString("I believe i can fly", 10, 50), "i can fly");
     }
+
+    @Test
+    public void getUnifiedStr() {
+        String[] str = {"one", "two", "three", "four", "five"};
+        assertEquals(MyStrings.getUnifiedStr(str), "one, two, three, four, five");
+    }
 }
