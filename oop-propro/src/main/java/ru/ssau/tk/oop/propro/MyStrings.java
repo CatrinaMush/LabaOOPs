@@ -45,11 +45,24 @@ public class MyStrings {
 
     public int countStrings(String[] array, String prefix, String postfix) {
         int count = 0;
-        for (String string : array) {
-            if (string.startsWith(prefix) && string.endsWith(postfix)) {
+        for (String str : array) {
+            if (str.startsWith(prefix) && str.endsWith(postfix)) {
                 count++;
             }
         }
         return count;
+    }
+
+    public int newCountOfStrings(String[] array, String prefix, String postfix) {
+        int number = 0;
+        for (int i = 0; i < array.length; i++) {
+            array[i] = array[i].trim();
+        }
+        for (String str : array) {
+            if (str.startsWith(prefix) && str.endsWith(postfix)) {
+                number++;
+            }
+        }
+        return number;
     }
 }

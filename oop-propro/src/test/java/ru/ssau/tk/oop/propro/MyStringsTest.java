@@ -75,4 +75,11 @@ public class MyStringsTest {
         assertEquals(myFirstString.countStrings(new String[]{"river", "dog", "dry long", "respect bigger", "among"}, "r", "r"), 2);
         assertEquals(myFirstString.countStrings(new String[]{"river", "dog", "dry long", "respect bigger", "among"}, "l", "l"), 0);
     }
+
+    @Test
+    public void newCountOfStrings() {
+        assertEquals(myFirstString.newCountOfStrings(new String[]{" river", "dog ", " dry long", "respect bigger ", "among"}, "d", "g"), 2);
+        assertEquals(myFirstString.newCountOfStrings(new String[]{"river  ", "dog    ", "dry long", "respect bigger", "among"}, "r", "r"), 2);
+        assertEquals(myFirstString.newCountOfStrings(new String[]{"    river", "    dog", "    dry long", "respect bigger  ", "among"}, "l", "l"), 0);
+    }
 }
