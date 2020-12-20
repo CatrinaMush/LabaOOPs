@@ -26,4 +26,14 @@ public class MyException {
         }
         return newStr;
     }
+
+    public static char getCharOnIndex(String[] arrayStr, int n, int m) {
+        if (n > arrayStr.length) {
+            throw new StringIndexOutOfBoundsException();
+        }
+        if (m > arrayStr.length) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        return arrayStr[n].charAt(m);
+    }
 }

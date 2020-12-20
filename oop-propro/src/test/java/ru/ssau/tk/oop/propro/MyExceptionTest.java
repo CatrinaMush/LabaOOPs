@@ -30,4 +30,14 @@ public class MyExceptionTest {
         Assert.assertThrows(NullPointerException.class,
                 () -> assertNull(MyException.getSymbolOnIndex(str1, 0)));
     }
+
+    @Test
+    public void getCharOnIndex() {
+        String[] str = new String[]{"I", "believe", "i", "can", "fly"};
+        assertEquals(MyException.getCharOnIndex(str, 0, 0), 'I');
+        Assert.assertThrows(StringIndexOutOfBoundsException.class,
+                () -> MyException.getCharOnIndex(str, 30, 0));
+        Assert.assertThrows(ArrayIndexOutOfBoundsException.class,
+                () -> MyException.getCharOnIndex(str, 0, 30));
+    }
 }
