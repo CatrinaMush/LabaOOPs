@@ -42,4 +42,14 @@ public class MyStrings {
     public boolean isSameRegister(String firstString, String secondString) {
         return firstString.equalsIgnoreCase(secondString) && !firstString.equals(secondString);
     }
+
+    public int countStrings(String[] array, String prefix, String postfix) {
+        int count = 0;
+        for (String string : array) {
+            if (string.startsWith(prefix) && string.endsWith(postfix)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
