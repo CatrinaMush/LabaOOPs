@@ -374,4 +374,15 @@ public class MyArrays {
         }
         return number;
     }
+
+    public static void main(String[] args) {
+        String[] strs = {"Cats", "say", "meow meow"};
+        printStrings(strs);
+    }
+
+    public static void printStrings(String[] strs) {
+        for (String s : strs) {
+            System.out.println(s);
+        }
+    }
 }
