@@ -381,4 +381,11 @@ public class MyArraysTest {
         for (int i = 0; i < arrayTwo.length; i++)
             assertEquals(arrayTwo[i], checkArrayTwo[i]);
     }
+
+    @Test
+    public void multiply() {
+        Double result = MyArrays.multiply(new Double[]{2., 15., Double.NaN, Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY, 0.});
+        Double checkResult = 30.;
+        assertEquals(result, checkResult);
+    }
 }

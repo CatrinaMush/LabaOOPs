@@ -363,4 +363,15 @@ public class MyArrays {
             java.util.Arrays.sort(array);
         }
     }
+
+    public static Double multiply(Double[] array) {
+        Double number = 1.;
+        for (Double i : array) {
+            if (i.isNaN() || i.isInfinite() || i == 0) {
+                continue;
+            }
+            number *= i;
+        }
+        return number;
+    }
 }
