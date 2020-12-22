@@ -316,4 +316,27 @@ public class MyArraysTest {
         for (int i = 0; i < arrayOne.length; i++)
             assertEquals(firstArray.findEvenNumbers(arrayTwo)[i], checkArrTwo[i]);
     }
+
+    @Test
+    public void convertLongToTwoInts() {
+        int[] arrayOne = {-1, -2};
+        for (int i = 0; i < 2; i++)
+            assertEquals(firstArray.convertLongToTwoInts(-2L)[i], arrayOne[i]);
+        int[] arrayTwo = {0, 130};
+        for (int i = 0; i < 2; i++)
+            assertEquals(firstArray.convertLongToTwoInts(130L)[i], arrayTwo[i]);
+        int[] arrayThree = {0, 1};
+        for (int i = 0; i < 2; i++)
+            assertEquals(firstArray.convertLongToTwoInts(1L)[i], arrayThree[i]);
+        int[] arrayFour = {0, 0};
+        for (int i = 0; i < 2; i++)
+            assertEquals(firstArray.convertLongToTwoInts(0)[i], arrayFour[i]);
+    }
+
+    @Test
+    public void convertTwoIntsToLong() {
+        assertEquals(firstArray.convertTwoIntsToLong(1, -2), -2);
+        assertEquals(firstArray.convertTwoIntsToLong(2, 2), 8589934594L);
+        assertEquals(firstArray.convertTwoIntsToLong(0, 1), 1);
+    }
 }

@@ -316,4 +316,12 @@ public class MyArrays {
         }
         return bool;
     }
+
+    public int[] convertLongToTwoInts(long number) {
+        return new int[]{(int) (number >> 32), (int) number};
+    }
+
+    public long convertTwoIntsToLong(int first, int last) {
+        return ((long) last | (long) first << 32);
+    }
 }
