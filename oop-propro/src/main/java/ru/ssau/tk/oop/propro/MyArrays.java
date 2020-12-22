@@ -351,4 +351,16 @@ public class MyArrays {
         }
         return array;
     }
+
+    public static void sortWithoutNaN(Double[] array) {
+        int k = 0;
+        for (double v : array) {
+            if (Double.isNaN(v)) {
+                k++;
+            }
+        }
+        if (k == 0) {
+            java.util.Arrays.sort(array);
+        }
+    }
 }

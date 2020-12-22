@@ -365,4 +365,20 @@ public class MyArraysTest {
             for (int j = 0; j < arrayTwo[i].length; j++)
                 assertEquals(firstArray.createTwoDimensionalArray(2)[i][j], arrayTwo[i][j]);
     }
+
+
+    @Test
+    public void sortWithoutNaN() {
+        Double[] arrayOne = {5.5, 1., 0., 6.};
+        MyArrays.sortWithoutNaN(arrayOne);
+        Double[] checkArrayOne = {0., 1., 5.5, 6.};
+        for (int i = 0; i < arrayOne.length; i++)
+            assertEquals(arrayOne[i], checkArrayOne[i]);
+
+        Double[] arrayTwo = {1.4, 1.2, 4.5, Double.NaN, 7.9};
+        MyArrays.sortWithoutNaN(arrayTwo);
+        Double[] checkArrayTwo = {1.4, 1.2, 4.5, Double.NaN, 7.9};
+        for (int i = 0; i < arrayTwo.length; i++)
+            assertEquals(arrayTwo[i], checkArrayTwo[i]);
+    }
 }
