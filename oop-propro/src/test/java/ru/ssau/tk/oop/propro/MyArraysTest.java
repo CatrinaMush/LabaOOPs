@@ -353,4 +353,16 @@ public class MyArraysTest {
         Assert.assertThrows(IllegalArgumentException.class,
                 () -> firstArray.getCycleOfNaturalNumbers(3, 5));
     }
+
+    @Test
+    public void createTwoDimensionalArray() {
+        int[][] arrayOne = {{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {10, 11, 12}, {13, 14}, {15}};
+        for (int i = 0; i < arrayOne.length; i++)
+            for (int j = 0; j < arrayOne[i].length; j++)
+                assertEquals(firstArray.createTwoDimensionalArray(5)[i][j], arrayOne[i][j]);
+        int[][] arrayTwo = {{1, 2}, {3}};
+        for (int i = 0; i < arrayTwo.length; i++)
+            for (int j = 0; j < arrayTwo[i].length; j++)
+                assertEquals(firstArray.createTwoDimensionalArray(2)[i][j], arrayTwo[i][j]);
+    }
 }
