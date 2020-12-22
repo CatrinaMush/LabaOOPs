@@ -1,5 +1,6 @@
 package ru.ssau.tk.oop.propro;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -338,5 +339,18 @@ public class MyArraysTest {
         assertEquals(firstArray.convertTwoIntsToLong(1, -2), -2);
         assertEquals(firstArray.convertTwoIntsToLong(2, 2), 8589934594L);
         assertEquals(firstArray.convertTwoIntsToLong(0, 1), 1);
+    }
+
+    @Test
+    public void getCycleOfNaturalNumbers() {
+        int[] arrayOne = {3, 4, 5, 1, 2};
+        for (int i = 0; i < arrayOne.length; i++)
+            assertEquals(firstArray.getCycleOfNaturalNumbers(5, 3)[i], arrayOne[i]);
+        assertEquals(firstArray.getCycleOfNaturalNumbers(1, 0)[0], 1);
+        int[] arrayThree = {2, 3, 4, 5, 6, 7, 1};
+        for (int i = 0; i < arrayThree.length; i++)
+            assertEquals(firstArray.getCycleOfNaturalNumbers(7, 6)[i], arrayThree[i]);
+        Assert.assertThrows(IllegalArgumentException.class,
+                () -> firstArray.getCycleOfNaturalNumbers(3, 5));
     }
 }
